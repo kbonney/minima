@@ -32,7 +32,7 @@ layout: default
           </a>
         </h3>
         {%- if site.show_excerpts -%}
-          {{ post.flavor }}
+          {{ post.flavor | markdownify }}
         {%- endif -%}
       </li>
       <hr>
