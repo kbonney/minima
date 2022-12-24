@@ -31,10 +31,8 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
-        {%- if post.flavor -%}
-          {{post.flavor}}
         {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+          {{ post.flavor }}
         {%- endif -%}
       </li>
       <hr>
