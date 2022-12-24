@@ -1,21 +1,19 @@
-
 ---
 layout: default
 ---
 
 <div class="home">
-  <!--
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
-  -->
+
   {{ content }}
 
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
   {% else %}
-    {% assign posts = site.tags.blog %}
+    {% assign posts = site.posts %}
   {% endif %}
 
 
@@ -34,9 +32,8 @@ layout: default
           </a>
         </h3>
         {%- if site.show_excerpts -%}
-          {{ post.custom_excerpt | markdownify}}
+          {{ post.excerpt }}
         {%- endif -%}
-        <hr class="style-two">
       </li>
       {%- endfor -%}
     </ul>
