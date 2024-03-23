@@ -15,4 +15,29 @@ img {
     height: auto;
   }
 
-  
+.img-wrap {
+    float: left; /* or right if you want the text to wrap around the right side of the image */
+    margin-right: 20px; /* Spacing between the image and text */
+    width: 50%; /* Adjust the width as needed */
+}
+
+/* Responsive images */
+.img-wrap img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure the layout clears properly */
+p:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .img-wrap {
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+}
